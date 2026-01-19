@@ -1,3 +1,5 @@
+NUMERAL RECOGNITION SYSTEM
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 **Handwritten Numeral Recognition App (CNN + Capsule Network)**
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -5,16 +7,15 @@ _Handwritten-Numeral-Recog is an intelligent handwritten digit recognition syste
 The system accurately recognizes handwritten digits (0–9) from images and returns the predicted numeral._
 
 ============================================================================================================================================================
-
 **🚀 Key Features**
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 ✅ Handwritten digit recognition (0–9)
 ✅ Hybrid deep learning model (CNN + Capsule Network)
 ✅ High accuracy on handwritten inputs
 ✅ Image preprocessing & normalization
 ✅ Flask-based prediction API
 ✅ Simple and efficient architecture
-
+============================================================================================================================================================
 **🏗️ SDLC Overview (Like Building a House)**
 
 This project follows standard SDLC phases:
