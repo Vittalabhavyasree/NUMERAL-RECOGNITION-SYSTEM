@@ -2,6 +2,7 @@
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 _Handwritten-Numeral-Recog is an intelligent handwritten digit recognition system built using Python, Flask (Backend) and a deep learning model combining Convolutional Neural Networks (CNN) and Capsule Networks (CapsNet).
 The system accurately recognizes handwritten digits (0–9) from images and returns the predicted numeral._
+
 ============================================================================================================================================================
 **🚀 Key Features**
 
