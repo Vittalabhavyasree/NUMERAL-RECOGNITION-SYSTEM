@@ -51,6 +51,7 @@ Image → Feature Extraction → Classifier → Output
 Image → CNN (feature extraction) → Capsule Network (spatial awareness) → Digit Prediction
 
 (Capsules preserve orientation and positional relationships)
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 **⚙️ Tech Stack**
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
