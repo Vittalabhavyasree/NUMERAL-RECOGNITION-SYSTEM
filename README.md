@@ -4,6 +4,7 @@ Handwritten-Numeral-Recog is an intelligent handwritten digit recognition system
 The system accurately recognizes handwritten digits (0–9) from images and returns the predicted numeral.
 
 **🚀 Key Features**
+
 ✅ Handwritten digit recognition (0–9)
 ✅ Hybrid deep learning model (CNN + Capsule Network)
 ✅ High accuracy on handwritten inputs
