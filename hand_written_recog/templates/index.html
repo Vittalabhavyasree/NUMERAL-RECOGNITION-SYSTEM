@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw a Digit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container-box {
+            max-width: 600px;
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #0d6efd;
+        }
+
+        canvas {
+            border: 2px solid #dee2e6;
+            background-color: #fff;
+            cursor: crosshair;
+            border-radius: 10px;
+        }
+
+        .canvas-wrapper {
+            width: 280px;
+            height: 280px;
+            margin: 0 auto 25px auto;
+        }
+
+        .btn {
+            margin: 8px 10px;
+            width: 130px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container d-flex justify-content-center">
+        <div class="container-box">
+            <h2>Draw a Digit</h2>
+            <div class="canvas-wrapper">
+                <canvas id="canvas" width="280" height="280"></canvas>
+            </div>
+            <form id="form" method="POST" action="/predict">
+                <input type="hidden" name="imageData" id="imageData">
+                <button type="submit" class="btn btn-primary">Predict</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="clearCanvas()">Clear</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        let drawing = false;
+
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        canvas.addEventListener('mousedown', () => {
+            drawing = true;
+            ctx.beginPath();
+        });
+
+        canvas.addEventListener('mouseup', () => drawing = false);
+        canvas.addEventListener('mouseleave', () => drawing = false);
+        canvas.addEventListener('mousemove', draw);
+
+        function draw(e) {
+            if (!drawing) return;
+            const rect = canvas.getBoundingClientRect();
+            ctx.lineWidth = 15;
+            ctx.lineCap = 'round';
+            ctx.strokeStyle = 'black';
+            ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(e.clientX - rect.left, e.clientY - rect.top);
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "white";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+        }
+
+        document.getElementById("form").addEventListener("submit", function () {
+            const imageData = canvas.toDataURL("image/png");
+            document.getElementById("imageData").value = imageData;
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>
