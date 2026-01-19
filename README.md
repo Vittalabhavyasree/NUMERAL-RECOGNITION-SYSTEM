@@ -140,3 +140,13 @@ Educational tools
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This project demonstrates how combining CNN and Capsule Networks improves handwritten digit recognition by preserving spatial information. The system achieves reliable accuracy and can be extended for real-world OCR applications.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Output**
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<img width="1373" height="775" alt="Screenshot 2026-01-19 201036" src="https://github.com/user-attachments/assets/3ef9dc09-6247-4ecd-86cf-f79444453380" />
+
+<img width="1504" height="890" alt="Screenshot 2026-01-19 201025" src="https://github.com/user-attachments/assets/2b3d6626-8d32-43f6-95c8-a987dd479e27" />
+
+<img width="1571" height="927" alt="Screenshot 2026-01-19 200959" src="https://github.com/user-attachments/assets/ef827dee-0af8-41ec-a070-98910a79b8e1" />
